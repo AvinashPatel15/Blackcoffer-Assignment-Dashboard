@@ -1,9 +1,6 @@
-"use client";
-import { useState } from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import SideBar from "@/components/SideBar/SideBar";
-import Navbar from "@/components/Navabar/Navbar";
+import { MainLayout } from "@/components/Layout/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,20 +10,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const [navSize, changeNavSize] = useState("large");
-
   return (
     <html lang="en">
-      <body
-        className={`w-full min-h-full bg-[#f9f9f9] grid ${navSize == "small"? "grid-cols-[75px,1fr]" : "grid-cols-[250px,1fr]"}`}
-      >
-        <div className="min-h-full">
-          <SideBar />
-        </div>
-        <div className="min-h-full">
-          <Navbar />
-          <div className="w-full py-6 px-8">{children}</div>
-        </div>
+      <body>
+        <MainLayout children={children} />
       </body>
     </html>
   );

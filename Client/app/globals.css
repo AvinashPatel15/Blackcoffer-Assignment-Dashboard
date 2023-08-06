@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
+:root {
+  --background-color: #f9f9f9;
+  --card-color: #ffffff;
+  --active-color: #eef3ee;
+  --green-color: #518554;
+  --text-color: #b6b6b6;
+  --heading-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}

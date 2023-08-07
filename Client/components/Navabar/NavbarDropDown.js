@@ -23,7 +23,7 @@ import Link from "next/link";
 
 const NavbarDropDown = () => {
   return (
-    <div>
+    <div className="bg-white">
       <DropdownMenu>
         <DropdownMenuTrigger asChild className="cursor-pointer">
           <Avatar>
@@ -40,51 +40,67 @@ const NavbarDropDown = () => {
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-              <User className="h-5 w-5" />
-              <p className="text-base">Profile</p>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-              <CreditCard className="h-5 w-5" />
-              <span>Billing</span>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-              <Settings className="h-5 w-5" />
-              <span>Settings</span>
-            </DropdownMenuItem>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                <User className="h-5 w-5" />
+                <p className="text-base">Profile</p>
+              </DropdownMenuItem>
+            </div>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                <CreditCard className="h-5 w-5" />
+                <span>Billing</span>
+              </DropdownMenuItem>
+            </div>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                <Settings className="h-5 w-5" />
+                <span>Settings</span>
+              </DropdownMenuItem>
+            </div>
           </DropdownMenuGroup>
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <a href="mailto:avinashpatel9755@gmail.com" target="_blank">
-              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-                <MailPlus className="h-5 w-5" />
-                <p className="text-base">Mail</p>
-              </DropdownMenuItem>
-            </a>
-            <a href="https://github.com/AvinashPatel15" target="_blank">
-              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-                <Github className=" h-5 w-5" />
-                <span>Github</span>
-              </DropdownMenuItem>
-            </a>
-            <a href="http://avinashpatel15.github.io/" target="_blank">
-              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-                <Globe className=" h-5 w-5" />
-                <span>Portfolio</span>
-              </DropdownMenuItem>
-            </a>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <a href="mailto:avinashpatel9755@gmail.com" target="_blank">
+                <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                  <MailPlus className="h-5 w-5" />
+                  <p className="text-base">Mail</p>
+                </DropdownMenuItem>
+              </a>
+            </div>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <a href="https://github.com/AvinashPatel15" target="_blank">
+                <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                  <Github className=" h-5 w-5" />
+                  <span>Github</span>
+                </DropdownMenuItem>
+              </a>
+            </div>
+            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+              <a href="http://avinashpatel15.github.io/" target="_blank">
+                <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
+                  <Globe className=" h-5 w-5" />
+                  <span>Portfolio</span>
+                </DropdownMenuItem>
+              </a>
+            </div>
           </DropdownMenuGroup>
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <DropdownMenuItem className="flex gap-3 items-center cursor-pointer hover:bg-black">
-              <LogOut className="h-5 w-5 text-red-500" />
-              <p className="text-base text-red-500">Logout</p>
-              <DropdownMenuShortcut className="text-red-500">
-                ⇧⌘Q
-              </DropdownMenuShortcut>
-            </DropdownMenuItem>
+            <div className="hover:bg-red-50 rounded-[5px]">
+              <DropdownMenuItem className="group flex gap-3 items-center cursor-pointer">
+                <LogOut className="h-5 w-5 text-red-500 group-hover:text-red-700" />
+                <p className="text-base text-red-500 group-hover:text-red-700">
+                  Logout
+                </p>
+                <DropdownMenuShortcut className="text-red-500 group-hover:text-red-700">
+                  ⇧⌘Q
+                </DropdownMenuShortcut>
+              </DropdownMenuItem>
+            </div>
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>

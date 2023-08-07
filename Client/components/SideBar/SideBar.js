@@ -22,7 +22,7 @@ export default function SideBar({ navSize, changeNavSize }) {
       <div
         className={`w-full flex flex-col ${
           navSize === "large" ? "items-start" : "items-center"
-        } p-[15px]`}
+        } ${navSize === "large" ? "py-[15px]" : "py-[20px]"} px-[11px]`}
       >
         <div
           className={`w-full flex ${
@@ -54,45 +54,45 @@ export default function SideBar({ navSize, changeNavSize }) {
         >
           <SideBarItems
             navSize={navSize}
-            icon={<FiHome size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiHome size={"18px"} />}
             title="Dashboard"
-            link={""}
+            link={"/"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiCalendar size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiCalendar size={"18px"} />}
             title="Calendar"
-            link={"calender"}
+            link={"/calender"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiUser size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiUser size={"18px"} />}
             title="Clients"
-            link={"clients"}
+            link={"/clients"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<IoPawOutline size={"18px"} color={"#b6b6b6"} />}
+            icon={<IoPawOutline size={"18px"} />}
             title="Animals"
-            link={"animals"}
+            link={"/animals"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiDollarSign size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiDollarSign size={"18px"} />}
             title="Stocks"
-            link={"stocks"}
+            link={"/stocks"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiBriefcase size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiBriefcase size={"18px"} />}
             title="Reports"
-            link={"reports"}
+            link={"/reports"}
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiSettings size={"18px"} color={"#b6b6b6"} />}
+            icon={<FiSettings size={"18px"} />}
             title="Settings"
-            link={"setting"}
+            link={"/setting"}
           />
           {/* <div>
             <MiniClock />

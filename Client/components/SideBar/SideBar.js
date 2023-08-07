@@ -1,15 +1,8 @@
 import React from "react";
 import "../../app/globals.css";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
-import {
-  FiHome,
-  FiCalendar,
-  FiUser,
-  FiDollarSign,
-  FiBriefcase,
-  FiSettings,
-} from "react-icons/fi";
-import { IoPawOutline } from "react-icons/io5";
+import { FiHome, FiCalendar, FiUser, FiSettings } from "react-icons/fi";
+import { FaBookReader } from "react-icons/fa";
 import SideBarItems from "./SideBarItems";
 
 export default function SideBar({ navSize, changeNavSize }) {
@@ -66,37 +59,23 @@ export default function SideBar({ navSize, changeNavSize }) {
           />
           <SideBarItems
             navSize={navSize}
-            icon={<FiUser size={"18px"} />}
-            title="Clients"
-            link={"/clients"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<IoPawOutline size={"18px"} />}
-            title="Animals"
-            link={"/animals"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<FiDollarSign size={"18px"} />}
-            title="Stocks"
-            link={"/stocks"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<FiBriefcase size={"18px"} />}
-            title="Reports"
-            link={"/reports"}
-          />
-          <SideBarItems
-            navSize={navSize}
             icon={<FiSettings size={"18px"} />}
             title="Settings"
-            link={"/setting"}
+            link={"/settings"}
           />
-          {/* <div>
-            <MiniClock />
-          </div> */}
+
+          <SideBarItems
+            navSize={navSize}
+            icon={<FiUser size={"18px"} />}
+            title="Contact"
+            link={"/contact"}
+          />
+          <SideBarItems
+            navSize={navSize}
+            icon={<FaBookReader size={"18px"} />}
+            title="About"
+            link={"/about"}
+          />
         </div>
       </div>
     </div>

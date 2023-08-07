@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Satisfy&display=swap");
 :root {
   --background-color: #f9f9f9;
   --card-color: #ffffff;
@@ -17,7 +15,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -25,13 +22,8 @@ body {
 }
 
 .logo {
-  font-family: "Satisfy", cursive;
-  font-weight: 600;
-  font-size: 18px;
+  font-family: "Brush Script MT", cursive;
+  font-weight: 500;
+  font-size: 30px;
   cursor: pointer;
-}
-.linkdiv:active {
-  background-color: var(--active-color);
-  border-radius: 10px;
-  color: #658e68;
 }

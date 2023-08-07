@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../app/globals.css";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
 import {
@@ -22,7 +22,7 @@ export default function SideBar({ navSize, changeNavSize }) {
       <div
         className={`w-full flex flex-col ${
           navSize === "large" ? "items-start" : "items-center"
-        } ${navSize === "large" ? "py-[15px]" : "py-[20px]"} px-[11px]`}
+        } ${navSize === "large" ? "py-[4px]" : "py-[16px]"} px-[11px]`}
       >
         <div
           className={`w-full flex ${

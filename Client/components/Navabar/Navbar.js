@@ -7,7 +7,7 @@ import NavbarDropDown from "./NavbarDropDown";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white py-[15px] px-[33px] flex justify-between items-center">
+    <div className="w-full bg-white py-[15px] px-[33px] flex justify-between items-center sticky top-0 z-[100]">
       <div className="flex items-center gap-[10px]">
         <div className="flex items-center gap-[5px]">
           <button className="p-[7px] text-white rounded-full bg-black">

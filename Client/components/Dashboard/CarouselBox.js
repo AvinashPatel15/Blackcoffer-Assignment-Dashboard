@@ -19,7 +19,7 @@ const CarouselBox = () => {
           alt="img1"
           width={"100%"}
           height={"auto"}
-          className="border rounded-[15px] shadow-sm"
+          className="border rounded-[10px] shadow-sm"
         />
       </div>
       <div className="w-full">
@@ -28,7 +28,7 @@ const CarouselBox = () => {
           alt="img2"
           width={"100%"}
           height={"auto"}
-          className="border rounded-[15px] shadow-sm"
+          className="border rounded-[10px] shadow-sm"
         />
       </div>
       <div className="w-full">
@@ -37,7 +37,7 @@ const CarouselBox = () => {
           alt="img3"
           width={"100%"}
           height={"auto"}
-          className="border rounded-[15px] shadow-sm"
+          className="border rounded-[10px] shadow-sm"
         />
       </div>
     </Carousel>

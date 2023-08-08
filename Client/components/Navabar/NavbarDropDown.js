@@ -40,49 +40,51 @@ const NavbarDropDown = () => {
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
               <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                <User className="h-5 w-5" />
-                <p className="text-base">Profile</p>
+                <User className="h-5 w-5 group-hover:text-[#518554]" />
+                <p className="text-base group-hover:text-[#518554]">Profile</p>
               </DropdownMenuItem>
             </div>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
-              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                <CreditCard className="h-5 w-5" />
-                <span>Billing</span>
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
+              <DropdownMenuItem className="flex gap-3 items-center cursor-pointer ">
+                <CreditCard className="h-5 w-5 group-hover:text-[#518554]" />
+                <p className="text-base group-hover:text-[#518554]">Billing</p>
               </DropdownMenuItem>
             </div>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
               <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                <Settings className="h-5 w-5" />
-                <span>Settings</span>
+                <Settings className="h-5 w-5 group-hover:text-[#518554]" />
+                <p className="text-base group-hover:text-[#518554]">Settings</p>
               </DropdownMenuItem>
             </div>
           </DropdownMenuGroup>
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
               <a href="mailto:avinashpatel9755@gmail.com" target="_blank">
                 <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                  <MailPlus className="h-5 w-5" />
-                  <p className="text-base">Mail</p>
+                  <MailPlus className="h-5 w-5 group-hover:text-[#518554]" />
+                  <p className="text-base group-hover:text-[#518554]">Mail</p>
                 </DropdownMenuItem>
               </a>
             </div>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
               <a href="https://github.com/AvinashPatel15" target="_blank">
                 <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                  <Github className=" h-5 w-5" />
-                  <span>Github</span>
+                  <Github className=" h-5 w-5 group-hover:text-[#518554]" />
+                  <p className="text-base group-hover:text-[#518554]">Github</p>
                 </DropdownMenuItem>
               </a>
             </div>
-            <div className="hover:bg-[#f9f9f9] rounded-[5px]">
+            <div className="group hover:bg-[#eef3ee] rounded-[5px]">
               <a href="http://avinashpatel15.github.io/" target="_blank">
                 <DropdownMenuItem className="flex gap-3 items-center cursor-pointer">
-                  <Globe className=" h-5 w-5" />
-                  <span>Portfolio</span>
+                  <Globe className=" h-5 w-5 group-hover:text-[#518554]" />
+                  <p className="text-base group-hover:text-[#518554]">
+                    Portfolio
+                  </p>
                 </DropdownMenuItem>
               </a>
             </div>
@@ -90,7 +92,7 @@ const NavbarDropDown = () => {
 
           <DropdownMenuSeparator className="border-b" />
           <DropdownMenuGroup>
-            <div className="hover:bg-red-50 rounded-[5px]">
+            <div className="group hover:bg-red-50 rounded-[5px]">
               <DropdownMenuItem className="group flex gap-3 items-center cursor-pointer">
                 <LogOut className="h-5 w-5 text-red-500 group-hover:text-red-700" />
                 <p className="text-base text-red-500 group-hover:text-red-700">

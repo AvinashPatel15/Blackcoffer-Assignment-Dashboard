@@ -1,8 +1,7 @@
 import React from "react";
 import "../../app/globals.css";
 import { AiOutlineDoubleRight, AiOutlineDoubleLeft } from "react-icons/ai";
-import { FiHome, FiCalendar, FiUser, FiSettings } from "react-icons/fi";
-import { FaBookReader } from "react-icons/fa";
+import { FiHome } from "react-icons/fi";
 import SideBarItems from "./SideBarItems";
 
 export default function SideBar({ navSize, changeNavSize }) {
@@ -50,31 +49,6 @@ export default function SideBar({ navSize, changeNavSize }) {
             icon={<FiHome size={"18px"} />}
             title="Dashboard"
             link={"/"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<FiCalendar size={"18px"} />}
-            title="Calendar"
-            link={"/calender"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<FiSettings size={"18px"} />}
-            title="Settings"
-            link={"/settings"}
-          />
-
-          <SideBarItems
-            navSize={navSize}
-            icon={<FiUser size={"18px"} />}
-            title="Contact"
-            link={"/contact"}
-          />
-          <SideBarItems
-            navSize={navSize}
-            icon={<FaBookReader size={"18px"} />}
-            title="About"
-            link={"/about"}
           />
         </div>
       </div>

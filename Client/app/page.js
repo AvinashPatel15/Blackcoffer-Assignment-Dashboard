@@ -1,23 +1,56 @@
 "use client";
+import CarouselBox from "@/components/Dashboard/CarouselBox";
+import IntensityChart from "@/components/Dashboard/Charts/IntensityChart";
+import MiniClock from "@/components/Dashboard/MiniClock";
 
 export default function Home() {
   return (
     <div className="w-full">
+      {/* Top Section */}
       <div className="grid grid-cols-3 gap-5 mb-5">
-        <div className="p-2 rounded-md col-span-3 bg-white"></div>
+        {/* Carousel */}
+        <div className="col-span-2 ">
+          <CarouselBox />
+        </div>
+
+        {/* Clock And Date */}
+        <div className="col-span-1 bg-white border rounded-[10px] shadow-sm ">
+          <MiniClock />
+        </div>
       </div>
+
       <div className="grid grid-cols-3 gap-5 mb-5">
-        <div className="p-2 rounded-md col-span-1 bg-white"></div>
-        <div className="p-2 rounded-md col-span-2 bg-white"></div>
+        {/* Intensity */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-3 bg-white">
+          <IntensityChart />
+        </div>
       </div>
+
       <div className="grid grid-cols-3 gap-5 mb-5">
-        <div className="p-2 rounded-md col-span-1 bg-white"></div>
-        <div className="p-2 rounded-md col-span-1 bg-white"></div>
-        <div className="p-2 rounded-md col-span-1 bg-white"></div>
+        {/* City  */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-1 bg-white"></div>
+
+        {/* Likelihood */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-2 bg-white"></div>
       </div>
+
       <div className="grid grid-cols-3 gap-5 mb-5">
-        <div className="p-2 rounded-md col-span-2 bg-white"></div>
-        <div className="p-2 rounded-md col-span-1 bg-white"></div>
+        {/* Relevance */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-1 bg-white"></div>
+
+        {/* Year */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-1 bg-white"></div>
+
+        {/* Country */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-1 bg-white"></div>
+      </div>
+
+      <div className="grid grid-cols-3 gap-5 mb-5">
+        {/* Topics */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-2 bg-white"></div>
+
+        {/* Region */}
+        <div className="p-2 border rounded-[15px] shadow-sm col-span-1 bg-white"></div>
       </div>
     </div>
   );

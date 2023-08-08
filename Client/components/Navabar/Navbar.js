@@ -18,7 +18,7 @@ const Navbar = () => {
         <SearchBar />
       </div>
       <div className="flex items-center gap-[10px]">
-        <button className="p-[7px] rounded-full border-[2px] border-[#b6b6b6]">
+        <button className="p-[7px] rounded-full border border-[#b6b6b6]">
           <IoMdNotificationsOutline size={23} />
         </button>
 

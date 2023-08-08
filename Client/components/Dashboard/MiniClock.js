@@ -21,12 +21,15 @@ const MiniClock = () => {
   const formattedDate = currentTime.toLocaleDateString();
 
   return (
-    <div className="flex flex-col items-center p-4 border rounded-[15px] shadow-sm">
-      <div
-        className="text-2xl font-semibold"
-        dangerouslySetInnerHTML={{ __html: formattedTime }}
-      />
-      <div className="mt-2">{formattedDate}</div>
+    <div className="flex flex-col gap-2 items-center p-4 rounded-[10px] h-full justify-center bg-[#eef3ee] shadow-md">
+      <div className="flex flex-col justify-center items-center gap-4">
+        <div className="text-xl font-semibold text-[#518554]">Clock & Date</div>
+        <div
+          className="text-2xl font-semibold border border-[green] text-[#518554] px-3 py-2 rounded-[10px] "
+          dangerouslySetInnerHTML={{ __html: formattedTime }}
+        />
+      </div>
+      <div className="text-gray-600 font-semibold text-lg">{formattedDate}</div>
     </div>
   );
 };

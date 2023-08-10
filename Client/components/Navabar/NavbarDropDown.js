@@ -12,14 +12,12 @@ import {
   CreditCard,
   Github,
   Globe,
-  Keyboard,
   LogOut,
   MailPlus,
   Settings,
   User,
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Link from "next/link";
 
 const NavbarDropDown = () => {
   return (

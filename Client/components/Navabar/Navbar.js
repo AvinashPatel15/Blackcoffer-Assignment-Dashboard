@@ -15,7 +15,9 @@ const Navbar = () => {
           </button>
           <p className="text-md font-semibold">Analytics</p>
         </div>
-        <SearchBar />
+        <div className="hidden md:block">
+          <SearchBar />
+        </div>
       </div>
       <div className="flex items-center gap-[10px]">
         <button className="p-[7px] rounded-full border border-[#b6b6b6]">

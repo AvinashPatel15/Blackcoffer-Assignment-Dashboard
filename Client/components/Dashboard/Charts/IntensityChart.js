@@ -10,7 +10,7 @@ import {
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { ArrowDownZA, ArrowUpAZ } from "lucide-react";
 
-const IntensityChart = () => {
+const IntensityChart = ({ data }) => {
   return (
     <div className="w-full flex flex-col gap-3">
       <div className="w-full flex gap-3 justify-between items-center">
@@ -45,8 +45,9 @@ const IntensityChart = () => {
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+      {/* <div>
 
-      {/* <div>Chart</div> */}
+      </div> */}
     </div>
   );
 };

@@ -22,21 +22,21 @@ const getChart = async () => {
 };
 
 export default function Home() {
-  const [chartData, setChartData] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     getChart().then((res) => {
-      setChartData(res);
+      setData(res);
     });
   }, []);
 
-  // console.log(chartData);
+  console.log(data);
   return (
     <div className="w-full flex flex-col gap-6">
       {/* Top Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Carousel (Hidden on Mobile and Tablet) */}
-        <div className="hidden md:block md:col-span-2">
+        <div className="hidden md:block md:col-span-2 rounded-[10px] shadow-sm">
           <CarouselBox />
         </div>
 
@@ -48,19 +48,14 @@ export default function Home() {
 
       {/* Intensity */}
       <div className="p-4 border rounded-[10px] shadow-sm bg-white">
-        <IntensityChart chartData={chartData} />
+        <IntensityChart data={data} />
       </div>
 
-      {/* City and Likelihood */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* City */}
-        <div className="p-4 border rounded-[10px] shadow-sm bg-white">
-          <CityChart />
-        </div>
-
+      {/*Likelihood */}
+      <div className="w-full">
         {/* Likelihood */}
-        <div className="p-4 border rounded-[10px] shadow-sm bg-white">
-          <LikelihoodChart />
+        <div className="p-4 border rounded-[10px] shadow-sm bg-white w-full">
+          <LikelihoodChart data={data} />
         </div>
       </div>
 

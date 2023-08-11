@@ -166,22 +166,23 @@ const Topic = async (req, res) => {
 
 const Region = async (req, res) => {
   try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
-
-    const totalDocs = await chartModel.countDocuments();
-    const totalPages = Math.ceil(totalDocs / limit);
-
-    const chartData = await chartModel
-      .find()
-      .skip((page - 1) * limit)
-      .limit(limit);
+    const chartData = await chartModel.aggregate([
+      {
+        $match: {
+          region: { $ne: "", $not: /^United States of America$/i }, // Exclude documents with empty country field
+        },
+      },
+      {
+        $group: {
+          _id: "$region",
+          totalRelevance: { $sum: "$relevance" },
+          totalLikelihood: { $sum: "$likelihood" },
+          totalIntensity: { $sum: "$intensity" },
+        },
+      },
+    ]);
 
     return res.send({
-      page,
-      limit,
-      totalPages,
-      totalDocs,
       data: chartData,
     });
   } catch (error) {
@@ -247,22 +248,23 @@ const publishedDate = async (req, res) => {
 
 const Country = async (req, res) => {
   try {
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 10;
-
-    const totalDocs = await chartModel.countDocuments();
-    const totalPages = Math.ceil(totalDocs / limit);
-
-    const chartData = await chartModel
-      .find()
-      .skip((page - 1) * limit)
-      .limit(limit);
+    const chartData = await chartModel.aggregate([
+      {
+        $match: {
+          country: { $ne: "", $not: /^United States of America$/i }, // Exclude documents with empty country field
+        },
+      },
+      {
+        $group: {
+          _id: "$country",
+          totalRelevance: { $sum: "$relevance" },
+          totalLikelihood: { $sum: "$likelihood" },
+          totalIntensity: { $sum: "$intensity" },
+        },
+      },
+    ]);
 
     return res.send({
-      page,
-      limit,
-      totalPages,
-      totalDocs,
       data: chartData,
     });
   } catch (error) {

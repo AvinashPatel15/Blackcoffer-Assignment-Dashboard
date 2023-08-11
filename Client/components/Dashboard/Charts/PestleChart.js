@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,6 +11,7 @@ import { ArrowDown01, ArrowUp10 } from "lucide-react";
 import ChartApi from "@/api/chart";
 import "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import { Button } from "@/components/ui/button";
 
 const PestleChart = () => {
   const [page, setPage] = useState(1);
@@ -71,7 +71,7 @@ const PestleChart = () => {
   return (
     <div className="w-full flex flex-col gap-3">
       <div className="w-full flex gap-3 justify-between items-center">
-        <p className="text-lg">Country</p>
+        <p className="text-lg">Pestle</p>
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="cursor-pointer">
             <Button>
@@ -109,7 +109,7 @@ const PestleChart = () => {
       <div className="mt-5 flex items-center justify-end gap-5">
         {page > 1 ? (
           <button
-            className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+            className="px-5 py-2 bg-red-600 text-white font-semibold border rounded-[10px]"
             onClick={() => setPage(1)}
           >
             Reset
@@ -118,15 +118,15 @@ const PestleChart = () => {
 
         {page > 1 ? (
           <button
-            className="px-5 py-4 text-blue bg-teal-100 rounded-md border-none"
+            className="px-5 py-2 bg-blue-600 text-white font-semibold border rounded-[10px]"
             onClick={() => setPage(page - 1)}
           >
-            Back to Prev
+            Load Less
           </button>
         ) : null}
 
         <button
-          className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+          className="px-5 py-2 bg-green-600 text-white font-semibold border rounded-[10px]"
           onClick={() => setPage(page + 1)}
         >
           Load More

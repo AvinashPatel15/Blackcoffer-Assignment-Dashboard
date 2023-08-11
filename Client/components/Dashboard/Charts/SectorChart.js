@@ -121,7 +121,7 @@ const SectorChart = () => {
       <div className="mt-5 flex items-center justify-end gap-5">
         {page > 1 ? (
           <button
-            className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+            className="px-5 py-2 bg-red-600 text-white font-semibold border rounded-[10px]"
             onClick={() => setPage(1)}
           >
             Reset
@@ -130,15 +130,15 @@ const SectorChart = () => {
 
         {page > 1 ? (
           <button
-            className="px-5 py-4 text-blue bg-teal-100 rounded-md border-none"
+            className="px-5 py-2 bg-blue-600 text-white font-semibold border rounded-[10px]"
             onClick={() => setPage(page - 1)}
           >
-            Back to Prev
+            Load Less
           </button>
         ) : null}
 
         <button
-          className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+          className="px-5 py-2 bg-green-600 text-white font-semibold border rounded-[10px]"
           onClick={() => setPage(page + 1)}
         >
           Load More

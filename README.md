@@ -7,7 +7,7 @@ This is Admin Dashboard
 ##  Tech-stack used
   
    ```
-   Frontend : Next.JS, TailwindCSS, ui.shadcn, Chart.js
+   Frontend : Next.JS, TailwindCSS, ui.shadcn, Chart.JS
    Backend : ExpressJS, NodeJS, Mongoose
    DataBase   : MongoDB
    Frontend Deployment : Vercel

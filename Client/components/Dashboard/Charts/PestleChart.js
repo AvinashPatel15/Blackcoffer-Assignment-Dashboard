@@ -10,48 +10,62 @@ import {
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { ArrowDown01, ArrowUp10 } from "lucide-react";
 import ChartApi from "@/api/chart";
-import { Bar } from "react-chartjs-2";
 import "chart.js/auto";
+import { Bar } from "react-chartjs-2";
 
-const CountryChart = () => {
+const PestleChart = () => {
+  const [page, setPage] = useState(1);
   const [charData, setChartData] = useState([]);
-  const getChart = async () => {
+
+  const getChart = async (page) => {
     try {
-      const res = await ChartApi.CountryChartApi();
-      setChartData(res.data);
+      const res = await ChartApi.SectorChartApi(page);
+      if (page == 1) {
+        setChartData(res?.data);
+      } else {
+        setChartData((prev) => {
+          return [...prev, ...res?.data];
+        });
+      }
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getChart();
-  }, []);
+    getChart(page);
+  }, [page]);
 
-  const labels = charData.map((item) => item._id);
-  const relevanceData = charData.map((item) => item.totalRelevance);
-  const likelihoodData = charData.map((item) => item.totalLikelihood);
-  const intensityData = charData.map((item) => item.totalIntensity);
+  const labels = charData.map((item) => item.pestle);
+  const relevanceData = charData.map((item) => item.relevance);
+  const likelihoodData = charData.map((item) => item.likelihood);
 
   const data = {
-    labels,
+    labels: labels,
     datasets: [
       {
-        label: "Total Relevance",
-        data: relevanceData,
+        label: "Relevance",
         backgroundColor: "rgba(75, 192, 192, 0.6)",
+        data: relevanceData,
       },
       {
-        label: "Total Likelihood",
-        data: likelihoodData,
-        backgroundColor: "rgba(255, 159, 64, 0.6)",
-      },
-      {
-        label: "Total Intensity",
-        data: intensityData,
+        label: "Likelihood",
         backgroundColor: "rgba(255, 99, 132, 0.6)",
+        data: likelihoodData,
       },
     ],
+  };
+
+  const chartOptions = {
+    scales: {
+      x: {
+        stacked: true,
+      },
+      y: {
+        stacked: true,
+        beginAtZero: true,
+      },
+    },
   };
 
   return (
@@ -89,10 +103,37 @@ const CountryChart = () => {
         </DropdownMenu>
       </div>
       <div className="w-full m-auto">
-        <Bar data={data} />
+        <Bar data={data} options={chartOptions} />
+      </div>
+
+      <div className="mt-5 flex items-center justify-end gap-5">
+        {page > 1 ? (
+          <button
+            className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+            onClick={() => setPage(1)}
+          >
+            Reset
+          </button>
+        ) : null}
+
+        {page > 1 ? (
+          <button
+            className="px-5 py-4 text-blue bg-teal-100 rounded-md border-none"
+            onClick={() => setPage(page - 1)}
+          >
+            Back to Prev
+          </button>
+        ) : null}
+
+        <button
+          className="px-5 py-4 text-white bg-teal-500 rounded-md border-none"
+          onClick={() => setPage(page + 1)}
+        >
+          Load More
+        </button>
       </div>
     </div>
   );
 };
 
-export default CountryChart;
+export default PestleChart;
